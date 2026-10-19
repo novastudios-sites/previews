@@ -1,41 +1,205 @@
 <!doctype html>
-<html lang="en" dir="ltr">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Physio Logic Ltd.</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap">
+<title>Physio Logic Ltd. · Physiotherapy in Otley</title>
+<meta name="description" content="Hands-on physiotherapy in Otley: we find what&#x27;s causing the pain, treat it, and give you a plan to keep it away.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Manrope:wght@400;500;600;700&display=swap">
 <style>
 .sf-ribbon{position:sticky;top:0;z-index:99;background:#111;color:#fff;font:600 13px/1.4 system-ui,sans-serif;text-align:center;padding:8px 12px}
-:root{--dark:#0e2a3a;--accent:#1e8fa8;--light:#f3f9fb}
-*{box-sizing:border-box} body{margin:0;font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:var(--dark);background:var(--light);line-height:1.6}
-.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
-header{background:var(--dark);color:#fff;padding:96px 0 80px}
-header h1{font-size:clamp(34px,6vw,60px);line-height:1.1;margin:0 0 12px;font-weight:800}
-header p.lead{font-size:20px;opacity:.85;margin:0 0 28px;max-width:40ch}
-.btn{display:inline-block;background:var(--accent);color:#fff;font-weight:700;padding:14px 24px;border-radius:10px;text-decoration:none}
-.rating{margin:18px 0 0;opacity:.85}
-section{padding:64px 0}
-.pts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
-.pt{background:#fff;border-radius:14px;padding:22px;border:1px solid rgba(0,0,0,.06)}
-.pt b{display:block;font-size:18px;margin-bottom:4px}
-.info{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
-h2{font-size:28px;margin:0 0 16px} ul{padding-inline-start:18px;margin:0}
-footer{background:var(--dark);color:#fff;padding:28px 0;font-size:14px;opacity:.95}
-a{color:var(--accent)}
-</style></head>
+:root{--bg:#f6f3ee;--surface:#ffffff;--ink:#14261f;--muted:#5b6b63;--accent:#2f7d5b;--soft:#dcebe2;--deep:#10211a;
+--display:'Fraunces',Georgia,serif;--body:'Manrope',system-ui,-apple-system,sans-serif;--r:22px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1160px,100% - 40px);margin-inline:auto}
+h1,h2,h3{font-family:var(--display);font-weight:500;letter-spacing:-.02em;line-height:1.05}
+em{font-style:italic;color:var(--accent)}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.eyebrow:before{content:"";width:28px;height:1.5px;background:currentColor}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--bg);font-weight:600;padding:16px 26px;border-radius:999px;transition:transform .25s,box-shadow .25s,background .25s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 14px 30px -12px var(--accent);background:var(--accent)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid color-mix(in srgb,var(--ink) 18%,transparent)}
+.btn.ghost:hover{background:var(--surface);box-shadow:none}
+.btn svg{transition:transform .25s} .btn:hover svg{transform:translateX(4px)}
+
+/* nav */
+nav{position:sticky;top:34px;z-index:50;padding:14px 0;transition:background .3s,box-shadow .3s}
+nav.stuck{background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 color-mix(in srgb,var(--ink) 8%,transparent)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:flex;align-items:center;gap:12px;font-weight:700;font-size:17px}
+.mark{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:var(--ink);color:var(--bg);font-family:var(--display);font-size:18px;font-style:italic}
+.links{display:flex;gap:30px;font-size:15px;color:var(--muted)} .links a:hover{color:var(--ink)}
+nav .btn{padding:11px 20px;font-size:14px}
+
+/* hero */
+.hero{position:relative;padding:70px 0 90px;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;z-index:-1;animation:float 16s ease-in-out infinite}
+.b1{width:520px;height:520px;background:var(--soft);right:-120px;top:-80px}
+.b2{width:340px;height:340px;background:color-mix(in srgb,var(--accent) 35%,transparent);right:220px;bottom:-140px;animation-delay:-6s}
+@keyframes float{50%{transform:translate(-30px,25px) scale(1.06)}}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center}
+.hero h1{font-size:clamp(48px,7.4vw,96px);margin:22px 0 24px}
+.hero p.sub{font-size:clamp(17px,1.6vw,20px);color:var(--muted);max-width:34ch;margin-bottom:34px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.proof{display:inline-flex;gap:8px;align-items:center;margin-top:28px;font-size:14px;color:var(--muted)} .proof svg{color:#e0a100;fill:#e0a100}
+.card{position:relative;background:var(--surface);border-radius:28px;padding:30px;box-shadow:0 40px 80px -40px color-mix(in srgb,var(--ink) 45%,transparent),0 0 0 1px color-mix(in srgb,var(--ink) 6%,transparent);transform:rotate(1.5deg);transition:transform .5s}
+.card:hover{transform:rotate(0) translateY(-4px)}
+.card .top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin:8px 0 22px}
+.card .top b{font-family:var(--display);font-size:26px;font-weight:500}
+.pill{font-size:12px;font-weight:600;background:var(--soft);color:var(--accent);padding:6px 12px;border-radius:999px;display:inline-flex;gap:6px;align-items:center}
+.pill:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent);animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.3}}
+.card ul{list-style:none;display:grid;gap:14px;margin-bottom:26px}
+.card li{display:flex;gap:12px;align-items:center;padding:14px 16px;border-radius:14px;background:var(--bg);font-size:15px}
+.card li svg{color:var(--accent);flex:none}
+.card .btn{width:100%;justify-content:center}
+.card .tag{position:absolute;left:-22px;top:-20px;background:var(--ink);color:var(--bg);border-radius:16px;padding:12px 16px;display:flex;gap:10px;align-items:center;font-size:14px;font-weight:600;transform:rotate(-4deg);box-shadow:0 20px 40px -20px var(--ink)}
+
+/* marquee */
+.marquee{border-block:1px solid color-mix(in srgb,var(--ink) 10%,transparent);overflow:hidden;padding:20px 0;background:var(--surface)}
+.track{display:flex;gap:56px;width:max-content;animation:scroll 32s linear infinite}
+.track span{font-family:var(--display);font-size:clamp(22px,2.6vw,32px);font-style:italic;white-space:nowrap;display:flex;align-items:center;gap:56px}
+.track span:after{content:"✦";font-style:normal;font-size:16px;color:var(--accent)}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+section{padding:110px 0}
+.head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:56px;flex-wrap:wrap}
+.head h2{font-size:clamp(36px,4.6vw,60px);max-width:16ch;margin-top:16px}
+.head p{max-width:38ch;color:var(--muted)}
+
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.svc{background:var(--surface);border-radius:var(--r);padding:34px 30px;border:1px solid color-mix(in srgb,var(--ink) 7%,transparent);transition:transform .35s,box-shadow .35s,border-color .35s}
+.svc:hover{transform:translateY(-6px);box-shadow:0 30px 60px -36px color-mix(in srgb,var(--ink) 50%,transparent);border-color:transparent}
+.ico{width:54px;height:54px;border-radius:16px;background:var(--soft);color:var(--accent);display:grid;place-items:center;margin-bottom:26px;transition:transform .35s}
+.svc:hover .ico{transform:rotate(-8deg) scale(1.06)}
+.svc h3{font-size:25px;margin-bottom:10px} .svc p{color:var(--muted);font-size:15.5px}
+
+.dark{background:var(--deep);color:#f4f2ee;border-radius:40px;margin-inline:16px}
+.dark .head p,.dark .steps p{color:color-mix(in srgb,#fff 62%,transparent)}
+.dark em{color:color-mix(in srgb,var(--accent) 55%,#fff)}
+.steps{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:s}
+.steps li{padding:34px 30px;border-radius:var(--r);background:color-mix(in srgb,#fff 5%,transparent);border:1px solid color-mix(in srgb,#fff 10%,transparent)}
+.num{font-family:var(--display);font-style:italic;font-size:54px;color:color-mix(in srgb,var(--accent) 55%,#fff);display:block;margin-bottom:22px;line-height:1}
+.steps h3{font-size:27px;margin-bottom:8px}
+
+.split{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
+.why{list-style:none;display:grid;gap:4px}
+.why li{display:flex;gap:18px;padding:24px 0;border-bottom:1px solid color-mix(in srgb,var(--ink) 10%,transparent)}
+.why svg{color:var(--accent);flex:none;margin-top:3px}
+.why b{display:block;font-size:19px;margin-bottom:2px} .why span{color:var(--muted)}
+.faq{display:grid;gap:12px}
+details{background:var(--surface);border-radius:18px;padding:22px 26px;border:1px solid color-mix(in srgb,var(--ink) 7%,transparent)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;font-weight:600;font-size:17px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary i{width:28px;height:28px;border-radius:50%;background:var(--soft);position:relative;flex:none;transition:transform .3s}
+summary i:before,summary i:after{content:"";position:absolute;left:8px;right:8px;top:13px;height:2px;background:var(--accent);border-radius:2px}
+summary i:after{transform:rotate(90deg);transition:transform .3s}
+details[open] summary i:after{transform:rotate(0)}
+details p{color:var(--muted);margin-top:12px}
+
+.visit{display:grid;grid-template-columns:1fr 1.2fr;gap:22px}
+.panel{background:var(--surface);border-radius:28px;padding:40px;border:1px solid color-mix(in srgb,var(--ink) 7%,transparent)}
+.panel h3{font-size:30px;margin-bottom:22px}
+.panel ul{list-style:none;display:grid;gap:10px;color:var(--muted);margin-bottom:30px}
+.crow{display:flex;gap:14px;align-items:center;padding:16px 0;border-top:1px solid color-mix(in srgb,var(--ink) 8%,transparent);font-weight:500;transition:color .2s}
+.crow:hover{color:var(--accent)} .crow svg{color:var(--accent);flex:none}
+.map{border-radius:28px;overflow:hidden;min-height:420px;border:1px solid color-mix(in srgb,var(--ink) 7%,transparent);background:var(--soft)}
+.map iframe{width:100%;height:100%;min-height:420px;border:0;filter:grayscale(.35) contrast(1.05)}
+
+.band{text-align:center;padding:120px 0}
+.band h2{font-size:clamp(40px,6vw,78px);max-width:18ch;margin:0 auto 34px}
+footer{padding:40px 0 50px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;border-top:1px solid color-mix(in srgb,var(--ink) 10%,transparent);padding-top:30px}
+
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.hero .reveal{transition-delay:calc(var(--d,0)*120ms)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+@media (max-width:900px){
+ .links{display:none} .hero .wrap,.split,.visit{grid-template-columns:1fr} .grid,.steps{grid-template-columns:1fr}
+ .hero{padding:40px 0 70px} .card{transform:none} .card .tag{left:14px;top:-18px} nav .btn{display:none} .logo{font-size:16px} section{padding:80px 0}
+ .dark{margin-inline:8px;border-radius:28px} .panel{padding:28px}
+}
+@media (min-width:600px) and (max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
 <body>
 <div class="sf-ribbon">Free preview made for Physio Logic Ltd. by Nova Studios. Not the official website.</div>
-<header><div class="wrap">
-<h1>Physio Logic Ltd.</h1><p class="lead">Care you can trust, close to home</p><a class="btn" href="tel:">Call us</a>
-</div></header>
-<section><div class="wrap"><div class="pts">
-<div class="pt"><b>Experienced, friendly team</b></div><div class="pt"><b>Modern equipment</b></div><div class="pt"><b>Book your appointment online</b></div>
-</div></div></section>
-<section style="background:#fff"><div class="wrap info">
-<div><h2>Opening hours</h2><ul><li>Call us for opening hours</li></ul></div>
-<div><h2>Find us</h2><p>26 Westgate, Otley</p>
-<p><a href="https://www.google.com/maps/search/?api=1&amp;query=Physio%20Logic%20Ltd.%2053.9051216,-1.6958858">Open in Google Maps</a></p>
-</div>
+<nav id="nav"><div class="wrap">
+  <a class="logo" href="#top"><span class="mark">PL</span>Physio Logic Ltd.</a>
+  <div class="links"><a href="#services">Services</a><a href="#how">How it works</a><a href="#faq">FAQ</a><a href="#visit">Visit</a></div>
+  <a class="btn" href="mailto:enquiries@physio-logic.co.uk">Book an assessment</a>
+</div></nav>
+
+<header class="hero" id="top">
+  <div class="blob b1"></div><div class="blob b2"></div>
+  <div class="wrap">
+    <div>
+      <span class="eyebrow reveal" style="--d:0">Physiotherapy · Otley</span>
+      <h1 class="reveal" style="--d:1">Move better.<br><em>Hurt less.</em></h1>
+      <p class="sub reveal" style="--d:2">Hands-on physiotherapy in Otley: we find what&#x27;s causing the pain, treat it, and give you a plan to keep it away.</p>
+      <div class="actions reveal" style="--d:3">
+        <a class="btn" href="mailto:enquiries@physio-logic.co.uk">Book an assessment <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn ghost" href="#services">What we do</a>
+      </div>
+      
+    </div>
+    <aside class="card reveal" style="--d:2">
+      <div class="top"><b>Your first visit</b><span class="pill">Open to new patients</span></div>
+      <ul><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 12.2l2.4 2.4 4.6-4.8"/></svg>Talk through what&#x27;s going on</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 12.2l2.4 2.4 4.6-4.8"/></svg>Movement and strength check</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 12.2l2.4 2.4 4.6-4.8"/></svg>Treatment and a clear plan</li></ul>
+      <a class="btn" href="mailto:enquiries@physio-logic.co.uk">Book now</a>
+      <div class="tag"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg>Otley</div>
+    </aside>
+  </div>
+</header>
+
+<div class="marquee"><div class="track"><span>Back &amp; neck pain</span><span>Sports injuries</span><span>Post-surgery rehab</span><span>Joint pain</span><span>Posture</span><span>Headaches</span><span>Back &amp; neck pain</span><span>Sports injuries</span><span>Post-surgery rehab</span><span>Joint pain</span><span>Posture</span><span>Headaches</span></div></div>
+
+<section id="services"><div class="wrap">
+  <div class="head"><div><span class="eyebrow">What we do</span><h2>Everything you need, <em>under one roof.</em></h2></div>
+  <p>Here's how we can help. Don't see what you need? Get in touch and just ask.</p></div>
+  <div class="grid"><article class="svc reveal"><div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7l10 10M5.5 8.5a2 2 0 1 1 1.5-3.5 2 2 0 1 1 3.4 1.6M18.5 15.5a2 2 0 1 1-1.5 3.5 2 2 0 1 1-3.4-1.6"/></svg></div><h3>Back &amp; neck pain</h3><p>Easing stiffness and pain so everyday things feel normal again.</p></article><article class="svc reveal"><div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13" cy="4.5" r="1.8"/><path d="M9 21l2.5-6.5L14 16v5M7 11l3-3.5h4l3 4M11.5 14.5L10 9"/></svg></div><h3>Sports injuries</h3><p>Sprains, strains and overuse injuries, with a safe route back to training.</p></article><article class="svc reveal"><div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Post-surgery rehab</h3><p>Structured recovery after operations, at a pace that suits you.</p></article><article class="svc reveal"><div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></div><h3>Massage &amp; manual therapy</h3><p>Hands-on treatment to release tension and restore movement.</p></article><article class="svc reveal"><div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 12.2l2.4 2.4 4.6-4.8"/></svg></div><h3>Exercise programmes</h3><p>Simple, targeted exercises you can do at home between sessions.</p></article><article class="svc reveal"><div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8.5" r="3.2"/><path d="M3 19c.8-3.3 3.2-5 6-5s5.2 1.7 6 5"/><circle cx="17" cy="9.5" r="2.4"/><path d="M16 14.2c2.4.2 4.2 1.8 5 4.8"/></svg></div><h3>Workplace &amp; posture</h3><p>Practical changes for desk work, lifting and long days on your feet.</p></article></div>
 </div></section>
-<footer><div class="wrap">© Physio Logic Ltd.</div></footer>
-</body></html>
+
+<section class="dark" id="how"><div class="wrap">
+  <div class="head"><div><span class="eyebrow">How it works</span><h2>Simple from <em>the very first step.</em></h2></div>
+  <p>No complicated forms and no waiting around. Here's what to expect.</p></div>
+  <ol class="steps"><li class="reveal"><span class="num">01</span><h3>Get in touch</h3><p>Call or email and tell us a little about what&#x27;s bothering you.</p></li><li class="reveal"><span class="num">02</span><h3>Assessment</h3><p>We look at how you move and find the cause, not just the symptom.</p></li><li class="reveal"><span class="num">03</span><h3>Recover</h3><p>Treatment plus a plan you understand, so progress keeps going between visits.</p></li></ol>
+</div></section>
+
+<section id="faq"><div class="wrap split">
+  <div><span class="eyebrow">Why Physio Logic Ltd.</span><h2 style="font-size:clamp(34px,4.2vw,54px);margin:16px 0 30px">The clinic <em>Otley</em> trusts.</h2>
+    <ul class="why"><li class="reveal"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 12.2l2.4 2.4 4.6-4.8"/></svg><div><b>Time with you</b><span>Proper appointments, not a rushed five minutes.</span></div></li><li class="reveal"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 12.2l2.4 2.4 4.6-4.8"/></svg><div><b>Clear explanations</b><span>You&#x27;ll know what&#x27;s wrong and why each step helps.</span></div></li><li class="reveal"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 12.2l2.4 2.4 4.6-4.8"/></svg><div><b>Plans that fit your life</b><span>Exercises built around work, family and training.</span></div></li><li class="reveal"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 12.2l2.4 2.4 4.6-4.8"/></svg><div><b>Local and easy to reach</b><span>Right here in Otley.</span></div></li></ul></div>
+  <div><span class="eyebrow">Questions</span><h2 style="font-size:clamp(34px,4.2vw,54px);margin:16px 0 30px">Good to <em>know.</em></h2>
+    <div class="faq"><details class="reveal"><summary>Do I need a GP referral?<i></i></summary><p>No. You can book directly with us.</p></details><details class="reveal"><summary>What should I wear?<i></i></summary><p>Something comfortable that lets us see and move the area being treated.</p></details><details class="reveal"><summary>How many sessions will I need?<i></i></summary><p>It depends on the problem. After your assessment we&#x27;ll give you an honest estimate.</p></details><details class="reveal"><summary>Can I use health insurance?<i></i></summary><p>Get in touch and we&#x27;ll let you know which insurers we work with.</p></details></div></div>
+</div></section>
+
+<section id="visit" style="padding-top:0"><div class="wrap visit">
+  <div class="panel reveal"><h3>Visit us</h3>
+    <ul><li>Call us for today's opening hours</li></ul>
+    <a class="crow" href="mailto:enquiries@physio-logic.co.uk"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 6.5L12 13l8.5-6.5"/></svg><span>enquiries@physio-logic.co.uk</span></a><a class="crow" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Physio%20Logic%20Ltd.%2C%2026%20Westgate%2C%20Otley"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg><span>26 Westgate, Otley</span></a>
+  </div>
+  <div class="map reveal"><iframe loading="lazy" title="Map" src="https://www.google.com/maps?q=Physio%20Logic%20Ltd.%2C%2026%20Westgate%2C%20Otley&output=embed"></iframe></div>
+</div></section>
+
+<section class="band"><div class="wrap">
+  <span class="eyebrow">Physio Logic Ltd.</span>
+  <h2 style="margin-top:20px">Pain doesn&#x27;t have to be part of your routine.</h2>
+  <a class="btn" href="mailto:enquiries@physio-logic.co.uk">Book an assessment <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</div></section>
+
+<footer><div class="wrap"><span>© 2026 Physio Logic Ltd. · 26 Westgate, Otley</span><span>Physiotherapy in Otley</span></div></footer>
+
+<script>
+const nav=document.getElementById('nav'),rb=document.querySelector('.sf-ribbon');
+const setTop=()=>nav.style.top=(rb?rb.offsetHeight:0)+'px';setTop();addEventListener('resize',setTop);
+addEventListener('scroll',()=>nav.classList.toggle('stuck',scrollY>20),{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach((el,i)=>{if(!el.style.getPropertyValue('--d'))el.style.transitionDelay=(i%3)*90+'ms';io.observe(el)});
+</script>
+</body>
+</html>
